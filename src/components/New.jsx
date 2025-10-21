@@ -18,20 +18,23 @@ const New = () => {
           // name={"img"}
           placeholder="details"
         />
+        <br />
         <input
-          type="text-area"
+          type="number"
           // value={boat.description}
           // onChange={handleChange}
           // name={"description"}
-          // placeholder={"description"}
+          placeholder="Price"
         />
+        <br />
+        <label>Attach an image: </label>
         <input
-          type="text"
+          type="file"
           // value={boat.price}
           // onChange={handleChange}
           // name={"price"}
-          // placeholder={"price"}
         />
+        <br />
         <button>Submit</button>
       </form>
     </div>
