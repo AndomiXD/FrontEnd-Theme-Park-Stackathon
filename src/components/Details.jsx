@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import { Container } from "react-bootstrap"
+import Review from "./Review"
 
 const Details = () => {
   const [coaster, setCoaster] = useState({})
@@ -51,7 +52,7 @@ const Details = () => {
             Delete Roller Coaster
           </Button>
         </Card.Body>
-
+        <Review coaster={coaster} setCoaster={setCoaster} id={_id} />
         {coaster.reviews?.length > 0 && (
           <div className="reviews-container border-top mt-4 pt-3">
             <h3 className="text-light mb-3">Visitor Reviews</h3>

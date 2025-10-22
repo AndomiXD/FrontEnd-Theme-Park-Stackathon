@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 const New = ({ addRC, handleChange }) => {
   let navigate = useNavigate()
+
   const handleSubmit = (e) => {
     addRC(e)
     navigate("/")
