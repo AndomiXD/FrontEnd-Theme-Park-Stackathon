@@ -1,11 +1,22 @@
 import { NavLink } from "react-router-dom"
-const Nav=()=>{
-  return(<nav>
-    <div>
-      <NavLink to="/">Home | </NavLink>
-      <NavLink to="/new">New</NavLink>
-      </div>
+import Nav from "react-bootstrap/Nav"
 
-  </nav>)
+const Navigation = () => {
+  return (
+    <>
+      <Nav className="justify-content-center" activeKey="/home">
+        <Nav.Item>
+          <Nav.Link>
+            <NavLink to="/">Home</NavLink>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="link-1">
+            <NavLink to="/new">Add Roller Coaster</NavLink>
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </>
+  )
 }
-export default Nav
+export default Navigation
