@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom"
-const New = ({addRC, newRC, handleChange}) => {
-  let navigate=useNavigate()
+const New = ({ addRC, handleChange }) => {
+  let navigate = useNavigate()
   const handleSubmit = (e) => {
     addRC(e)
     navigate("/")
   }
-
-  const coaster = {...newRC}
   return (
     <div>
       <h1>Add A New Roller Coaster</h1>
@@ -35,12 +33,12 @@ const New = ({addRC, newRC, handleChange}) => {
           placeholder="Price"
         />
         <br />
-        <label>Attach an image: </label>
         <input
-          type="file"
+          type="text"
           // value={boat.price}
           onChange={handleChange}
-          name="image"
+          placeholder="Add a photo link"
+          name="img"
         />
         <br />
         <button>Submit</button>

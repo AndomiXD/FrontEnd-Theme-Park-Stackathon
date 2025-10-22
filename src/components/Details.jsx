@@ -2,16 +2,16 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-
+import Review from "./Review"
 const Details = () => {
+
   const [coaster, setCoaster] = useState({})
 
   const { _id } = useParams()
   const navigate = useNavigate()
-  const refresh = false
 
   const handleDelete = async () => {
-    const response = await axios.delete(`http://localhost:3000/coasters/${_id}`)
+    await axios.delete(`http://localhost:3000/coasters/${_id}`)
     navigate("/")
   }
 
@@ -31,9 +31,11 @@ const Details = () => {
   return (
     <>
       <button onClick={handleDelete}> Delete Coaster</button>
+      <img src={coaster.img}/>
       <h1>Roller Coaster Name: {coaster.name}</h1>
       <h2>Details: {coaster.details}</h2>
       <h3>Price: ${coaster.price}</h3>
+      <Review id={_id} coaster={coaster} setCoaster={setCoaster}/>
       {coaster.reviews?.map((x, index) => (
         <div key={index}>
           <h4>
