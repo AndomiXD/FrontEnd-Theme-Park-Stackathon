@@ -2,18 +2,17 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
+import Button from "react-bootstrap/Button"
 
 const Details = () => {
   const [coaster, setCoaster] = useState({})
 
   const { _id } = useParams()
   const navigate = useNavigate()
-  const refresh = false
 
   const handleDelete = async () => {
     const response = await axios.delete(`http://localhost:3000/coasters/${_id}`)
     navigate("/")
-    refresh = true
   }
 
   useEffect(() => {
@@ -26,16 +25,16 @@ const Details = () => {
       }
     }
     getOneCoaster()
-    refresh = false
-  }, [refresh])
+  }, [])
 
   console.log(coaster)
   return (
     <>
       <button onClick={handleDelete}> Delete Coaster</button>
-      <h1>Roller Coaster Name: {coaster.name}</h1>
-      <h2>Details: {coaster.details}</h2>
-      <h3>Price: ${coaster.price}</h3>
+      <h1>Roller Coaster Name: {coaster?.name}</h1>
+      <img src={coaster?.img} alt="image of roller coaster" />
+      <h2>Details: {coaster?.details}</h2>
+      <h3>Price: ${coaster?.price}</h3>
       {coaster.reviews?.map((x, index) => (
         <div key={index}>
           <h4>

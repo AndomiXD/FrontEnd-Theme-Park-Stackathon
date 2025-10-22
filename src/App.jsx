@@ -1,6 +1,8 @@
 import "./App.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios"
 import Home from "./components/Home"
+import Nav from "./components/Nav"
 import Details from "./components/Details"
 import { useState, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
@@ -22,8 +24,8 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <p>header</p>
+      <header className="NavBar">
+        <Nav />
       </header>
       <main>
         <Routes>

@@ -3,3 +3,7 @@ body {
   text-align: center;
   box-sizing: border-box;
 }
+
+.card-img {
+  opacity: 90%;
+}
