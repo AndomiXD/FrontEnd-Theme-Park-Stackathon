@@ -1,16 +1,39 @@
-# React + Vite
+# FRONTEND
+# Project Title: Theme-Park-Stackathon
+## Date: 10/1/2025
+### By: Munem Alkhalaf, Fatima Mohamed
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Munem Alkhalaf GitHub](https://github.com/AndomiXD) |
+[Fatima Mohamed GitHub](https://github.com/fatima-mohmd)
 
-Currently, two official plugins are available:
+# Theme-Park-Stackathon
+#### Mini Hackathon for a Theme Park project:-
+Roller-dat-coaster is a MERN-stack website that shows roller coasters to users, where they can also add their own roller coasters or delete them, in addition to seeing the details of a roller coaster, they are able to add comments on a selected roller coaster.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+#### ***Functional Requirements***
+* The user can see all roller coasters
+* The user can add a roller coaster
+* The user can see the details of a roller coaster, such as name, description, image, and comments
+* The user can comment on a selected roller coaster
+* The user can delete a comment on a selected roller coaster
+* the user can delete a roller coaster
+* The user can navigate to Home page (Shows all roller coasters) and Add roller coaster
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ***Deployed version***
+
+##### [Roller-dat-coaster]()
+
+### ***Technologies***
+* React
+* CSS
+* JavaScript
+* NodeJS, EJS, Express Framework, Mongoose, MongoDB
+
+
+### ***Screenshots***
+
+![React Diagram](<images/React-Diagram.png>)
+
