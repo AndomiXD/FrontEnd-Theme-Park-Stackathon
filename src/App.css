@@ -2,4 +2,35 @@ body {
   margin: 0;
   text-align: center;
   box-sizing: border-box;
+  background-color: grey !important;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  text-shadow: 1px 1px 4px black;
+  background-color: grey;
+  padding-top: 15px;
+}
+
+.card-img {
+  max-height: 15rem;
+  filter: brightness(70%);
+  border: 3px solid rgba(173, 216, 230, 0.2);
+  box-shadow: 1px 1px 11px black;
+}
+
+.card-img:hover {
+  filter: brightness(60%);
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.nav-link-style {
+  padding: 10px;
 }

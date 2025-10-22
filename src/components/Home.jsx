@@ -1,22 +1,42 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
 import { Link } from "react-router-dom"
+import Card from "react-bootstrap/Card"
 
 const Home = ({ coasters }) => {
-  console.log(coasters)
+  // console.log(coasters)
   return (
-    <>
-      <p>home</p>
+    <div className="cards-container">
       {coasters.map((coaster) => (
         <Link
-          to={`/coasters/${coaster._id}`}
-          key={coaster._id}
+          to={`/coasters/${coaster?._id}`}
+          key={coaster?._id}
           coaster={coaster}
         >
-          <h1>{coaster.name}</h1>
+          <Card
+            className="card"
+            style={{
+              display: "flex",
+              alignContent: "center",
+              width: "28rem",
+              color: "white",
+            }}
+          >
+            <Card.Img
+              src={coaster?.img}
+              alt="Card image"
+              fluid="true"
+              className="card-img"
+            />
+
+            <Card.ImgOverlay>
+              <Card.Title>Name: {coaster?.name}</Card.Title>
+              <Card.Text>Details: {coaster?.details}</Card.Text>
+              <Card.Text>${coaster?.price} Per Person</Card.Text>
+            </Card.ImgOverlay>
+          </Card>
         </Link>
       ))}
-    </>
+    </div>
   )
 }
+
 export default Home

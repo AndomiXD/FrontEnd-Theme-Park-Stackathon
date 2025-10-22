@@ -1,8 +1,9 @@
 import "./App.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios"
 import Details from "./components/Details"
 import Home from "./components/Home"
-import Nav from "./components/Nav"
+import Navigation from "./components/Navigation"
 import New from "./components/New"
 
 import { useState, useEffect } from "react"
@@ -37,7 +38,10 @@ const App = () => {
       ...newRC,
       price: parseInt(newRC.price),
     }
-    const response = await axios.post("http://localhost:3000/coasters", createdRC)
+    const response = await axios.post(
+      "http://localhost:3000/coasters",
+      createdRC
+    )
 
     setCoasters([...coasters, response.data])
     setNewRC(emptyRC)
@@ -48,12 +52,17 @@ const App = () => {
   return (
     <>
       <header>
-        <Nav/>
+        <Navigation />
       </header>
       <main>
         <Routes>
           <Route path="/" element={<Home coasters={coasters} />}></Route>
-          <Route path="/new" element={<New addRC={addRC} newRC={newRC} handleChange={handleChange}/>}></Route>
+          <Route
+            path="/new"
+            element={
+              <New addRC={addRC} newRC={newRC} handleChange={handleChange} />
+            }
+          ></Route>
           <Route path="/coasters/:_id" element={<Details />} />
         </Routes>
       </main>

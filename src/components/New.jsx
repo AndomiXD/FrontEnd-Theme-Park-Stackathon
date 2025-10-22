@@ -11,31 +11,30 @@ const New = ({ addRC, handleChange }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          // value={boat.name}
           onChange={handleChange}
           name="name"
-          placeholder="name"
+          placeholder="Name"
+          required
         />
         <br />
         <input
           type="text"
-          // value={boat.img}
           onChange={handleChange}
           name="details"
-          placeholder="details"
+          placeholder="Details"
+          required
         />
         <br />
         <input
           type="number"
-          // value={boat.description}
           onChange={handleChange}
           name="price"
           placeholder="Price"
+          required
         />
         <br />
         <input
           type="text"
-          // value={boat.price}
           onChange={handleChange}
           placeholder="Add a photo link"
           name="img"
