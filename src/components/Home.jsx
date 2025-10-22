@@ -1,41 +1,38 @@
 import { Link } from "react-router-dom"
 import Card from "react-bootstrap/Card"
+import { Container, Row, Col } from "react-bootstrap"
 
 const Home = ({ coasters }) => {
-  // console.log(coasters)
   return (
-    <div className="cards-container">
-      {coasters.map((coaster) => (
-        <Link
-          to={`/coasters/${coaster?._id}`}
-          key={coaster?._id}
-          coaster={coaster}
-        >
-          <Card
-            className="card"
-            style={{
-              display: "flex",
-              alignContent: "center",
-              width: "28rem",
-              color: "white",
-            }}
-          >
-            <Card.Img
-              src={coaster?.img}
-              alt="Card image"
-              fluid="true"
-              className="card-img"
-            />
-
-            <Card.ImgOverlay>
-              <Card.Title>Name: {coaster?.name}</Card.Title>
-              <Card.Text>Details: {coaster?.details}</Card.Text>
-              <Card.Text>${coaster?.price} Per Person</Card.Text>
-            </Card.ImgOverlay>
-          </Card>
-        </Link>
-      ))}
-    </div>
+    <Container fluid className="py-5 home-container">
+      <Row className="g-4 justify-content-center">
+        {coasters.map((coaster) => (
+          <Col key={coaster?._id} xs={12} sm={6} md={5} lg={4} xl={3}>
+            <Link
+              to={`/coasters/${coaster?._id}`}
+              className="text-decoration-none"
+            >
+              <Card className="home-card shadow-lg border-0">
+                <div className="card-img-wrapper">
+                  <Card.Img
+                    src={coaster?.img}
+                    alt={coaster?.name}
+                    className="home-card-img"
+                  />
+                  <div className="card-overlay">
+                    <h4 className="fw-bold text-light mb-1">{coaster?.name}</h4>
+                    <p className="text-white-50 mb-2">
+                      {coaster?.details?.slice(0, 70)}...
+                    </p>
+                    <span className="price-tag">${coaster?.price}</span>
+                  </div>
+                </div>
+              </Card>
+            </Link>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   )
 }
 

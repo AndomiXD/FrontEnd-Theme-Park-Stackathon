@@ -6,9 +6,9 @@ const New = ({ addRC, handleChange }) => {
     navigate("/")
   }
   return (
-    <div>
+    <div className="new-container">
       <h1>Add A New Roller Coaster</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="new-form">
         <input
           type="text"
           onChange={handleChange}
@@ -16,7 +16,6 @@ const New = ({ addRC, handleChange }) => {
           placeholder="Name"
           required
         />
-        <br />
         <input
           type="text"
           onChange={handleChange}
@@ -24,7 +23,6 @@ const New = ({ addRC, handleChange }) => {
           placeholder="Details"
           required
         />
-        <br />
         <input
           type="number"
           onChange={handleChange}
@@ -32,15 +30,13 @@ const New = ({ addRC, handleChange }) => {
           placeholder="Price"
           required
         />
-        <br />
         <input
           type="text"
           onChange={handleChange}
           placeholder="Add a photo link"
           name="img"
         />
-        <br />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   )
