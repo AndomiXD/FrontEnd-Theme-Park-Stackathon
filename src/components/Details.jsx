@@ -13,7 +13,6 @@ const Details = () => {
   const handleDelete = async () => {
     const response = await axios.delete(`http://localhost:3000/coasters/${_id}`)
     navigate("/")
-    refresh = true
   }
 
   useEffect(() => {
@@ -26,8 +25,7 @@ const Details = () => {
       }
     }
     getOneCoaster()
-    refresh = false
-  }, [refresh])
+  }, [])
 
   console.log(coaster)
   return (
