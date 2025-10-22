@@ -2,13 +2,11 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-=
 import Review from "./Review"
 import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 
 const Details = () => {
-
   const [coaster, setCoaster] = useState({})
 
   const { _id } = useParams()
