@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-=
 import Review from "./Review"
 import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
@@ -53,7 +52,7 @@ const Details = () => {
             Delete Roller Coaster
           </Button>
         </Card.Body>
-
+        <Review coaster={coaster} setCoaster={setCoaster} id={_id}/>
         <div className="reviews-container">
           {coaster.reviews?.map((x, index) => (
             <div key={index}>
