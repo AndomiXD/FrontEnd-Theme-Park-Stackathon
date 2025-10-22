@@ -57,7 +57,7 @@ const Details = () => {
             <h3 className="text-light mb-3">Visitor Reviews</h3>
             {coaster.reviews.map((x, index) => (
               <div key={index} className="review-box mb-3">
-                <h5 className="text-white mb-1">“{x.comment}”</h5>
+                <h5 className="text-white mb-1">"{x.comment}"</h5>
                 <p className="text-warning mb-0">⭐ {x.rating}/5</p>
               </div>
             ))}
