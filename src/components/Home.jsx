@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 import Card from "react-bootstrap/Card"
 
 const Home = ({ coasters }) => {
-  console.log(coasters)
+  // console.log(coasters)
   return (
-    <>
+    <div className="cards-container">
       {coasters.map((coaster) => (
         <Link
           to={`/coasters/${coaster?._id}`}
@@ -12,6 +12,7 @@ const Home = ({ coasters }) => {
           coaster={coaster}
         >
           <Card
+            className="card"
             style={{
               display: "flex",
               alignContent: "center",
@@ -34,7 +35,7 @@ const Home = ({ coasters }) => {
           </Card>
         </Link>
       ))}
-    </>
+    </div>
   )
 }
 
