@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios"
 import Details from "./components/Details"
 import Home from "./components/Home"
-import Nav from "./components/Nav"
+import Navigation from "./components/Nav"
 import New from "./components/New"
 
 import { useState, useEffect } from "react"
@@ -52,7 +52,7 @@ const App = () => {
   return (
     <>
       <header>
-        <Nav />
+        <Navigation />
       </header>
       <main>
         <Routes>
