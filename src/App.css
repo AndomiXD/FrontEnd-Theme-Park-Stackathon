@@ -1,3 +1,7 @@
+html {
+  background: linear-gradient(135deg, #001f3f, #004080, #0066cc) !important;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -193,6 +197,55 @@ body {
 
 .review-box:hover {
   background: rgba(255, 255, 255, 0.15);
+}
+.review-form-container {
+  background: linear-gradient(135deg, #2c2f38, #1e2128);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.review-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.review-input::placeholder {
+  color: #b0b0b0;
+}
+
+.review-input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.4);
+}
+
+.rating-group label {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.rating-radio input[type="radio"] {
+  accent-color: #ffc107;
+  transform: scale(1.2);
+}
+
+.review-btn {
+  background: linear-gradient(90deg, #ffc107, #ffb700);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.review-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
 }
 
 .home-container {
