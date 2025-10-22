@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom"
-const New = ({ addRC, newRC, handleChange }) => {
+const New = ({ addRC, handleChange }) => {
   let navigate = useNavigate()
   const handleSubmit = (e) => {
     addRC(e)
     navigate("/")
   }
-
-  const coaster = { ...newRC }
   return (
     <div>
       <h1>Add A New Roller Coaster</h1>
@@ -38,9 +36,8 @@ const New = ({ addRC, newRC, handleChange }) => {
         <input
           type="text"
           onChange={handleChange}
+          placeholder="Add a photo link"
           name="img"
-          placeholder="Image Link"
-          required
         />
         <br />
         <button>Submit</button>
